@@ -10,18 +10,8 @@ build/
 DerivedData/
 *.xcuserdata/
 *.xcuserstate
+*.xcworkspace/xcuserdata/
 
-# Workspace
-*.xcworkspace
-
-# MacOS & editor
-.DS_Store
-*.swp
-
-# Swift Package Manager
-.build/
-Package.resolved
-
-# Pods (if used)
-Pods/
-
+# User-specific schemes
+xcuserdata/
+xcshareddata/xcschemes/*
