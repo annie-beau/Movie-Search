@@ -11,31 +11,24 @@ struct MovieSearchView: View {
     @State private var viewModel = MovieSearchViewModel()
     
     var body: some View {
-        List {
-            ForEach(viewModel.movieList, id: \.id) { movie in
-                // annie: make this a seperate view
-                HStack {
-                    AsyncImage(url: viewModel.createImageUrl(path: movie.posterPath)) { phase in
-                        if let image = phase.image {
-                            image.resizable()
-                                .aspectRatio(2/3, contentMode: .fit)
-                        } else {
-                            Image(systemName: "photo")
-                        }
-                    }.frame(width: 75)
-                    VStack(alignment: .leading) {
-                        Text("\(movie.title)").font(.headline)
-                        Text("\(movie.releaseDate)").font(.footnote)
-                            .foregroundStyle(Color.gray) // annie: circle back
+        VStack(alignment: .leading) {
+            Text("Movie Search")
+                .font(.title)
+                .padding()
+            TextField("Search", text: $viewModel.userInput)
+                .onSubmit {
+                    Task {
+                        await viewModel.getMovies()
                     }
                 }
+            List { // annie -- to switch to a ScrollView?
+                ForEach(viewModel.movieList, id: \.id) { movie in
+                    MovieListView(imageUrl: viewModel.createImageUrl(path: movie.posterPath), title: movie.title, releaseDate: movie.releaseDate)
+                }
             }
-        }.task {
-            await viewModel.getMovies()
         }
     }
-    
-    }
+}
 
 #Preview {
     MovieSearchView()

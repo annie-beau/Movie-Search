@@ -9,16 +9,19 @@ import SwiftUI
 import Combine
 
 @Observable class MovieSearchViewModel {
+    // annie -- add an init?
     var movieList = [MovieModel]()
+    var userInput: String = ""
     
+    // annie - add pagination
     func getMovies() async {
         let apiKey = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as! String
         var components = URLComponents(string: "https://api.themoviedb.org/3/search/movie")!
         components.queryItems = [
             URLQueryItem(name: "api_key", value: apiKey),
             URLQueryItem(name: "language", value: "en-US"),
-            URLQueryItem(name: "query", value: "comedy"), // can't hard code this
-            URLQueryItem(name: "page", value: "1"), // can't hard code this
+            URLQueryItem(name: "query", value: userInput), // annie - can't hard code this
+            URLQueryItem(name: "page", value: "1"), // annie - can't hard code this
             URLQueryItem(name: "include_adult", value: "false")
         ]
         guard let url = components.url else {
