@@ -1,0 +1,27 @@
+//
+//  .gitignore
+//  Movie-Search
+//
+//  Created by Annie Beaulieu on 10/27/25.
+//
+
+# Xcode build & user data
+build/
+DerivedData/
+*.xcuserdata/
+*.xcuserstate
+
+# Workspace
+*.xcworkspace
+
+# MacOS & editor
+.DS_Store
+*.swp
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# Pods (if used)
+Pods/
+

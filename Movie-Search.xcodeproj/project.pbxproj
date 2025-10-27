@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C43570452EB003AE0072B749 /* .gitignore in Sources */ = {isa = PBXBuildFile; fileRef = C43570442EB003990072B749 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C43570222EAFFDB20072B749 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		C43570142EAFFDB10072B749 /* Movie-Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie-Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43570212EAFFDB20072B749 /* Movie-SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie-SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C435702B2EAFFDB20072B749 /* Movie-SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie-SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43570442EB003990072B749 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		C435700B2EAFFDB10072B749 = {
 			isa = PBXGroup;
 			children = (
+				C43570442EB003990072B749 /* .gitignore */,
 				C43570162EAFFDB10072B749 /* Movie-Search */,
 				C43570242EAFFDB20072B749 /* Movie-SearchTests */,
 				C435702E2EAFFDB20072B749 /* Movie-SearchUITests */,
@@ -236,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43570452EB003AE0072B749 /* .gitignore in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
