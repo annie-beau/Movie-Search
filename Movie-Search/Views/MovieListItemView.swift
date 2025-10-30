@@ -1,5 +1,5 @@
 //
-//  MovieListView.swift
+//  MovieListItemView.swift
 //  Movie-Search
 //
 //  Created by Annie Beaulieu on 10/27/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MovieListView: View {
+struct MovieListItemView: View {
     var imageUrl: URL?
     var title: String
     var releaseDate: String
@@ -25,12 +25,12 @@ struct MovieListView: View {
             VStack(alignment: .leading) {
                 Text(title).font(.headline)
                 Text(releaseDate).font(.footnote)
-                    .foregroundStyle(Color.gray) // annie: circle back
+                    .foregroundStyle(Color.secondary) // annie: circle back
             }
         }
     }
 }
 
 #Preview {
-    MovieListView(title: "Example Title", releaseDate: "2021")
+    MovieListItemView(title: "Example Title", releaseDate: "2021")
 }
