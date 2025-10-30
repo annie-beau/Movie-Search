@@ -49,7 +49,7 @@ struct MovieSearchView: View {
                     List {
                         ForEach(viewModel.movieList, id: \.id) { movie in
                             ZStack(alignment: .leading) {
-                                    MovieListItemView(imageUrl: viewModel.createImageUrl(path: movie.posterPath), title: movie.title, releaseDate: viewModel.formatDate(dateString: movie.releaseDate, outputFormat: "yyyy"))
+                                MovieListItemView(imageUrl: viewModel.createImageUrl(path: movie.posterPath), title: movie.title, releaseDate: viewModel.formatDate(dateString: movie.releaseDate, outputFormat: "yyyy"))
                                     .onAppear {
                                         if movie == viewModel.movieList.last {
                                             Task {

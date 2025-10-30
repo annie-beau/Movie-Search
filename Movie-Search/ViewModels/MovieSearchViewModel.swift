@@ -53,7 +53,7 @@ import Combine
         }
         await getMovies(page: nextPage)
     }
-        
+    
     
     func createImageUrl(path: String?) -> URL? {
         guard let path = path else { return nil }
@@ -65,8 +65,8 @@ import Combine
         let inputFormatter = DateFormatter()
         inputFormatter.dateFormat = "yyyy-mm-dd"
         guard let date = inputFormatter.date(from: dateString) else {
-               return "Unknown"
-           }
+            return "Unknown"
+        }
         
         let outputFormatter = DateFormatter()
         outputFormatter.dateFormat = outputFormat

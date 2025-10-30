@@ -64,7 +64,7 @@ struct MovieDetailsView: View {
                 .font(.headline)
                 .fontWeight(.bold)
                 .foregroundStyle(Color.secondary)
-//                .padding(.top, 1)
+            //                .padding(.top, 1)
                 .padding(.vertical, 1)
             Text(overview)
                 .font(.subheadline)
