@@ -5,12 +5,14 @@
 //  Created by Annie Beaulieu on 10/27/25.
 //
 
-struct MovieModel: Codable {
+import Foundation
+
+struct MovieModel: Codable, Equatable, Hashable {
     let id: Int
     let title: String
-    let releaseDate: String // annie - need to plan for ""
+    let releaseDate: String
     let posterPath: String?
-    let rating: Double
+    let rating: Float
     let overview: String
     
     enum CodingKeys: String, CodingKey {
