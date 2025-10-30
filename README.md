@@ -11,7 +11,7 @@ Users can search for a movie and click to see more information about the movie.
 ```bash
 git clone https://github.com/annie-beau/Movie-Search.git
 ```
-- in Info.plist add the provided api key
+- in Info.plist add "API_KEY" with the provided api key
 
 ## Next Steps
 If given more time here are the things that I would do:
